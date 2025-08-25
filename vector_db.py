@@ -43,6 +43,3 @@ print(f"Number of text chunks created: {len(text_chunks)}")
 FAISS_DB_PATH = "vectorstore/db_faiss"
 faiss_db = FAISS.from_documents(text_chunks, get_embedding_model(ollama_model_name))
 faiss_db.save_local(FAISS_DB_PATH)
-
-
-
